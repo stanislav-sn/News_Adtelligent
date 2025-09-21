@@ -1,4 +1,4 @@
-export interface Article {
+interface Article {
   article_id: string;
   title: string;
   description: string;
@@ -8,4 +8,7 @@ export interface Article {
   pubDate: string;
   link: string;
   url: string;
+  content?: string;
 }
+
+export type ArticlePreview = Article;

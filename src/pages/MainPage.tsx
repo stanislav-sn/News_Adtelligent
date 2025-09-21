@@ -1,5 +1,7 @@
 import type { FC } from 'react';
+import { Link } from 'react-router';
 import Loader from '@/components/Loader';
+import { Button } from '@/components/ui/button';
 import { useFetchNews } from '@/hooks/useFetchNews';
 
 const MainPage: FC = () => {
@@ -27,6 +29,7 @@ const MainPage: FC = () => {
                     className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
                     src={article.image_url}
                     alt={article.title}
+                    loading="lazy"
                   />
 
                   <div className="mt-8">
@@ -54,14 +57,13 @@ const MainPage: FC = () => {
                         </p>
                       </div>
 
-                      <a
-                        href={article.url || '#'}
-                        className="inline-block text-blue-500 underline hover:text-blue-400"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Read more
-                      </a>
+                      <Button variant="link">
+                        <Link to={`/${article.article_id}`}>
+                          <span className="inline-block text-blue-500 underline hover:text-blue-400">
+                            Read more
+                          </span>
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </div>
