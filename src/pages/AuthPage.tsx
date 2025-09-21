@@ -1,5 +1,5 @@
-import { useState, type FC } from 'react';
 import { GalleryVerticalEnd } from 'lucide-react';
+import { type FC, useState } from 'react';
 
 import SignInForm from '@/components/SignIn-form';
 import SignUpForm from '@/components/SignUp-form';

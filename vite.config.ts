@@ -1,14 +1,13 @@
 import path from 'node:path';
-
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import terser from '@rollup/plugin-terser';
 import tailwindcss from '@tailwindcss/vite';
-import svgr from 'vite-plugin-svgr';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import viteCompression from 'vite-plugin-compression';
 import Inspect from 'vite-plugin-inspect';
-import { visualizer } from 'rollup-plugin-visualizer';
-import terser from '@rollup/plugin-terser';
+import svgr from 'vite-plugin-svgr';
 // import virtual from 'vite-plugin-virtual';
 
 // https://vite.dev/config/
