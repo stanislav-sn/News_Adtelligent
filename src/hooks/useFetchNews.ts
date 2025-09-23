@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import type { Article } from '@/types/article';
+import type { ArticlePreview } from '@/types/article';
 
 export const useFetchNews = () => {
-  const [news, setNews] = useState<Article[]>([]);
+  const [news, setNews] = useState<ArticlePreview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

@@ -7,6 +7,7 @@ import { Layout } from '../layout/Layout';
 
 const AuthPage = lazy(() => import('../../pages/AuthPage'));
 const MainPage = lazy(() => import('../../pages/MainPage'));
+const ArticlePage = lazy(() => import('../../pages/ArticlePage'));
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
             element: (
               <Suspense fallback={<Loader />}>
                 <MainPage />
+              </Suspense>
+            ),
+          },
+          {
+            path: ':id',
+            element: (
+              <Suspense fallback={<Loader />}>
+                <ArticlePage />
               </Suspense>
             ),
           },
